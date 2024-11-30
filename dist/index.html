@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KewberVerse - SexyMove Enthusiasts United</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="menu-bar">
+        <nav>
+            <ul>
+              <li><a href="#" data-section="home">Home</a></li>
+              <li><a href="#" data-section="statistics">Statistics</a></li>
+              <li><a href="#" data-section="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
+    <div class="container">
+
+        <aside class="sidebar left-sidebar">
+                <div class="button-container">
+                    <button id="connectButton">Connect Cube</button>
+                    <button id="resetButton">Reset/Stop</button>
+                    <button id="generateScrambleButton">Generate New Scramble</button>
+                </div>
+                <div class="info">
+                    <div class="info-item">
+                        <img src="src/icons/kub.png" alt="Device Name Icon">
+                        <input id="deviceName" type="text" readonly>
+                    </div>
+                    <div class="info-item">
+                        <img src="src/icons/kub.png" alt="Device MAC Icon">
+                        <input id="deviceMAC" type="text" readonly>
+                    </div>
+                    <div class="info-item">
+                        <img src="src/icons/batt.png" alt="Battery Level Icon">
+                        <input id="batteryLevel" type="text" readonly>
+                    </div>
+                </div>
+        </aside>
+
+
+        <main class="main-content" id="mainContent">
+
+          <div id="homeSection">
+            <section class="timer-section">
+                <div class="timer-container">
+                    <div id="solveTimer">00:00:00</div>
+                    <div id="inspectionTimer">15</div>
+                </div>
+            </section>
+            <section class="cube-section">
+                <div class="cube-container">
+                    <div id="cube"></div>
+                    <div id="scrambleDisplay">Scramble will appear here</div>
+                </div>
+            </section>
+          </div>
+
+          <div id="statisticsSection" style="display: none;">
+                <!-- Statistics content goes here -->
+                <div class="chart-container">
+                    <canvas id="solveChart"></canvas>
+                </div>
+            </div>
+            <div id="contactSection" style="display: none;">
+                <!-- Contact content goes here -->
+                <p>Contact us at: SuperCuber@ass.com</p>
+            </div>
+
+        </main>
+
+        <aside class="sidebar right-sidebar">
+
+            <section class="session-section">
+                <div class="session-times">
+                    <h2>Session Times</h2>
+                    <ul id="sessionTimes"></ul>
+                </div>
+            </section>
+
+            <section class="times-section">
+                    <div class="stats">
+                        <p>Average: <span id="averageTime">0:00.00</span></p>
+                        <p>Best: <span id="bestTime">0:00.00</span></p>
+                        <p>Worst: <span id="worstTime">0:00.00</span></p>
+                    </div>
+                </div>
+            </section>
+
+        </aside>
+    </div>
+
+
+    <footer>
+        <p>&copy; 2023 Cuber Timer. All rights reserved.</p>
+    </footer>
+
+
+    <div id="popupMessage" class="popup-message"></div>
+    <script src="dist/vendors.bundle.js"></script>
+    <script src="dist/main.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script defer src="vendors.bundle.js"></script><script defer src="main.bundle.js"></script></body>
+</html>

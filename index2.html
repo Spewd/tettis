@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speedcube Timer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="menu-bar">
+    <nav>
+      <ul>
+        <li><a href="#" section="home">Home</a></li>
+        <li><a href="#" section="statistics">Statistics</a></li>
+        <li><a href="#" section="contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="sidebar left-sidebar">
+      <div class="button-container">
+        <button>Connect Cube</button>
+        <button>Reset/Stop</button>
+        <button>Generate New Scramble</button>
+      </div>
+
+      <div class="info">
+        <div class="info-item">
+          <img src="src/icons/kub.png" alt="Device Name Icon">
+          <input type="text" value="Device Name">
+        </div>
+        <div class="info-item">
+          <img src="src/icons/kub.png" alt="Device MAC Icon">
+          <input type="text" value="Device MAC">
+        </div>
+        <div class="info-item">
+          <img src="src/icons/batt.png" alt="Battery Level Icon">
+          <input type="text" value="Battery Level">
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="timer-section">
+        <div class="timer-container">
+          <div id="solveTimer">00:00:00</div>
+          <div id="inspectionTimer">15</div>
+        </div>
+      </div>
+
+      <div class="cube-section">
+        <div class="cube-container">
+          <div id="cube"></div>
+          <div id="scrambleDisplay">Scramble will appear here</div>
+        </div>
+      </div>
+
+      <div class="session-section">
+        <div class="session-times">
+          <h2>Session Times</h2>
+          <ul>
+            <li>Time 1</li>
+            <li>Time 2</li>
+            <li>Time 3</li>
+            <!-- Add more session times here -->
+          </ul>
+        </div>
+
+        <div class="stats">
+          <p>Average: <span id="averageTime">0:00.00</span></p>
+          <p>Best: <span id="bestTime">0:00.00</span></p>
+          <p>Worst: <span id="worstTime">0:00.00</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar right-sidebar">
+      <!-- Additional sidebar content -->
+    </div>
+  </div>
+
+  <footer>
+    © 2023 Cuber Timer. All rights reserved.
+  </footer>
+
+  <div class="popup-message">
+    <!-- Popup message content -->
+  </div>
+
+  <!-- Add any necessary JavaScript code here -->
+</body>
+    <script src="dist/vendors.bundle.js"></script>
+    <script src="dist/main.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</html>
